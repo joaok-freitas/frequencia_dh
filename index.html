@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>SIDoc: Serviço de Informação dos Docentes</title>
+</head>
+<body>
+    <div class="fullpage-container">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <div class="top-bar-item">
+                    <!-- <img src="/img/colored-logo.png" alt="Logo da Universidade da Madeira" class="website-logo"> -->
+                    <img src="/img/white-logo.png" alt="Logo da Universidade da Madeira" class="website-logo">
+                </div>
+                <div class="top-bar-item">
+                    <h1 class="site-title">SIDoc - Serviço de Informação dos Docentes</h1>
+                </div>
+                <div class="top-bar-user-div">
+                    <label class="tooltip">
+                        <input type="checkbox" class="tooltip-toggle">
+                        <span class="tooltip-button"><img src="/img/user.png" alt="Foto do utilizador" class="user-image"></span>
+                        <div class="tooltiptext">
+                            <h4>Marcelo Rebelo de Sousa</h4>
+                            <h5>Professor de Design Hipermédia</h5>
+                            <input type="checkbox" id="darkmode-toggle">
+                            <label for="darkmode-toggle">
+                                <span class="toggle-track"></span>
+                                <span class="toggle-text">Modo escuro</span>
+                            </label>
+                            <div class="tooltip-link-div">
+                                <a href="#">curso@mail.uma.pt</a>
+                            </div>
+                            <div class="tooltip-link-div">
+                                <a href="#">Alterar Password</a>
+                            </div>
+                            <div class="tooltip-link-div">
+                                <a href="#">Alterar Foto</a>
+                            </div>
+                            <div class="tooltip-link-div">
+                                <a href="#">Sair</a>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card content-box1">
+                <h6>Pesquisa de sumários</h6>
+                <div class="searchbar-container">
+                    <div class="searchbar">
+                        <label for="inputYear" class="form-label">Ano Letivo</label>
+                        <select id="inputYear" class="form-select">
+                            <option selected></option>
+                            <option>2024/25</option>
+                            <option>2025/26</option>
+                        </select>
+                    </div>
+                    <div class="searchbar">
+                        <label for="inputCourse" class="form-label">Disciplina</label>
+                        <select id="inputCourse" class="form-select">
+                            <option></option>
+                            <option>Design Hipermédia</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="card content-box2">
+                <h6>Sumários</h6>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Aula nº</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Hora</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        <tr>
+                            <td><input type="radio" id="Aula1" name="aula" value="Aula1"></td>
+                            <td>1</td>
+                            <td>15-01-2025</td>
+                            <td>10:00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="Aula2" name="aula" value="Aula2"></td>
+                            <td>2</td>
+                            <td>16-01-2025</td>
+                            <td>8:00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="Aula3" name="aula" value="Aula3"></td>
+                            <td>3</td>
+                            <td>17-01-2026</td>
+                            <td>12:00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="Aula4" name="aula" value="Aula4"></td>
+                            <td>4</td>
+                            <td>18-01-2026</td>
+                            <td>10:00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="Aula5" name="aula" value="Aula5"></td>
+                            <td>5</td>
+                            <td>19-01-2026</td>
+                            <td>12:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card content-box3">
+                <h6>Vista atual</h6>
+                <ol class="list-group">
+                    <li class="list-group-item">Princípios de design hipermédia.</li>
+                    <li class="list-group-item">Procedimentos de marcação semântica de conteúdos.</li>
+                    <li class="list-group-item">Desenvolvimento com linguagens de formatação.</li>
+                    <li class="list-group-item">Aplicação de estratégias de design responsivo e/ou adaptativo.</li>
+                    <li class="list-group-item">Configuração do ambiente de desenvolvimento para a utilização de linguagens de templating.</li>
+                    <li class="list-group-item">Manipulação do DOM com Javascript.</li>
+                    <li class="list-group-item">Princípios de UX/UI.</li>
+                    <li class="list-group-item">Implementação de um website.</li>
+                </ol>
+                <textarea class="form-control" rows="4" placeholder="Editar sumário"></textarea>
+                <button type="button" class="btn btn-success">Guardar alterações</button>
+                <button class="btn btn-primary" popovertarget="my-popover">Marcar presenças</button>
+                <div popover id="my-popover" class="box">
+                    <div class="title">
+                        <h2>Marcar Presenças</h2> <button class="exit-btn" popovertarget="my-popover" popovertargetaction="hide">X</button>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col"></th>
+                                <th scope="col">Número</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <td><input type="checkbox" id="Aluno1" value="Aluno1" checked></td>
+                                <td>
+                                    <div class="aluno">
+                                        <img src="/img/user.png" alt="Foto do utilizador" class="user-image">
+                                        <span>André Ventura</span>
+                                    </div>
+                                </td>
+                                <td>2188764</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="Aluno2" value="Aluno2" checked></td>
+                                <td>
+                                    <div class="aluno">
+                                        <img src="/img/user.png" alt="Foto do utilizador" class="user-image">
+                                        <span>Maria Silva</span>
+                                    </div>
+                                </td>
+                                <td>2188765</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="Aluno3" value="Aluno3" checked></td>
+                                <td>
+                                    <div class="aluno">
+                                        <img src="/img/user.png" alt="Foto do utilizador" class="user-image">
+                                        <span>António Costa</span>
+                                    </div>
+                                </td>
+                                <td>2188766</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="buttons">
+                        <button class="btn btn-secondary" popovertarget="my-popover" popovertargetaction="hide">Fechar</button>
+                        <button class="btn btn-primary" popovertarget="my-popover" popovertargetaction="hide">Salvar Alterações</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>© Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas - <a href="https://www.uma.pt/privacidade-e-termos-de-utilizacao/">Proteção de Dados e Termos de Utilização</a><br>
+            Colégio dos Jesuitas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</p>
+        </div>
+    </div>
+</body>
+</html>
