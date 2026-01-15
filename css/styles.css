@@ -470,6 +470,8 @@ label[for="darkmode-toggle"] .toggle-track::after {
 	position: relative;
 	padding: 20px;
 	min-width: 30vw;
+	max-height: 80vh;
+	overflow-y: auto; 
 	border: 5px transparent;
 	border-radius: 5px;
 	background-color: var(--cor-claro);
